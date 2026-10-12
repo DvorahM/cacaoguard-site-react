@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sign in | CacaoGuard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="login">
+  <div class="login-photo"><img src="images/login-photo.jpg" alt="Cacao trees with ripening pods"></div>
+  <main class="login-side"><section class="panel"><h1>Welcome back</h1><p class="sub">Sign in to monitor Initao Cacao Farm and manage outbreaks.</p>
+<form id="form"><div class="field"><label for="email" style="display:block;margin-bottom:7px">EMAIL ADDRESS</label><div class="input"><img src="images/icon-mail.png" alt="" onerror="this.onerror=null;this.src='https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/7bf72052-eda8-49ca-ae2c-6c8e1446abcd'"><input id="email" type="email" placeholder="farmer@cacaoguard.ph" autocomplete="username" required></div></div>
+<div class="field"><div class="field-head"><label for="pw">PASSWORD</label><a href="forgot-password.html">Forgot?</a></div><div class="input"><img src="images/icon-lock.png" alt="" onerror="this.onerror=null;this.src='https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/07f5b8dc-649d-43c0-9628-f566c72c7aed'"><input id="pw" type="password" placeholder="••••••••••••" autocomplete="current-password" required><button type="button" id="eye" aria-label="Show password"><img src="images/icon-eye.png" alt="" onerror="this.onerror=null;this.src='https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/17dcc61b-5dc7-4852-91f0-38dec7c67f04'"></button></div></div>
+<label class="remember"><input type="checkbox"> Remember this device</label><button class="btn btn-primary" type="submit">Sign In to Dashboard</button><p class="msg" id="msg" role="status"></p></form>
+<p class="alt">No account yet? <a href="signup.html">Create one</a></p><div class="divider"></div>
+<div class="demo"><h2>DEMO ACCOUNTS</h2><div><b>Admin:</b> admin@cacaoguard.ph</div><div><b>Farmer:</b> farmer@cacaoguard.ph</div></div></section></main>
+</div>
+<script>var pw=document.getElementById('pw');
+document.getElementById('eye').addEventListener('click',function(){var s=pw.type==='password';pw.type=s?'text':'password';this.setAttribute('aria-label',s?'Hide password':'Show password');});
+document.getElementById('form').addEventListener('submit',function(e){e.preventDefault();var m=document.getElementById('email').value.toLowerCase();
+document.getElementById('msg').textContent='Signing in...';location.href=m.indexOf('admin')>-1?'dashboard.html':'farmer-dashboard.html';});</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Create account | CacaoGuard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="login">
+  <div class="login-photo"><img src="images/signup-photo.jpg" alt="Aerial view of cacao farm rows"></div>
+  <main class="login-side"><section class="panel"><h1>Create Account</h1><p class="sub">Register to monitor Initao Cacao Farm.</p>
+<form id="form"><div class="field tight"><label for="n">FULL NAME</label><div class="input"><input id="n" placeholder="Juan Dela Cruz" required></div></div>
+<div class="field tight"><label for="e">EMAIL ADDRESS</label><div class="input"><input id="e" type="email" placeholder="juan@cacaoguard.com" required></div></div>
+<div class="field tight"><label for="p1">PASSWORD</label><div class="input"><input id="p1" type="password" minlength="8" placeholder="At least 8 characters" required></div></div>
+<div class="field tight"><label for="p2">CONFIRM PASSWORD</label><div class="input"><input id="p2" type="password" placeholder="Repeat your password" required></div></div>
+<div class="field tight"><label for="fm">FARM NAME</label><div class="input"><input id="fm" placeholder="Initao Cacao Farm"></div></div>
+<div class="field tight"><label for="lc">LOCATION</label><div class="input"><input id="lc" value="Initao, Misamis Oriental" readonly></div></div>
+<button class="btn btn-primary" type="submit" style="margin-top:8px">Create Account</button><p class="msg" id="msg" role="status"></p></form>
+<p class="alt">Already have an account? <a href="login.html">Sign In</a></p></section></main>
+</div>
+<script>document.getElementById('form').addEventListener('submit',function(e){e.preventDefault();
+if(document.getElementById('p1').value!==document.getElementById('p2').value){document.getElementById('msg').textContent='Passwords do not match. Check both fields and try again.';return;}
+location.href='farmer-dashboard.html';});</script>
+</body>
+</html>
